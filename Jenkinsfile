@@ -30,7 +30,7 @@ pipeline {
                  
               
                            
-               sh 'ansible all -m ping -i hosts'
+               sh 'ansible -m ping all'
                
             }
 	    }
