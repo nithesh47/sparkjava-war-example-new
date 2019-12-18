@@ -30,7 +30,7 @@ pipeline {
                  
               
                            
-               sh 'ansible -m ping all'
+               sh 'ansible-playbook /ansible/deploy_tomcat-new.yml'
                
             }
 	    }
