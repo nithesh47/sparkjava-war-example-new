@@ -1,5 +1,5 @@
 pipeline {
-	agent 'Ansible-server'
+	agent Ansible-server
         tools { 
         maven 'maven-3.6.3'
 	
