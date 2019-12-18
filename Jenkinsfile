@@ -1,7 +1,8 @@
 pipeline {
 	agent any
         tools { 
-        maven 'maven-3.6.3' 
+        maven 'maven-3.6.3'
+	
          
     }
 	stages {
@@ -23,5 +24,16 @@ pipeline {
 				sh "mvn package"
 			}
 		}
+		stage('Ansible Deploy') {
+             
+                        steps {
+                 
+              
+                           
+               sh 'ansible all -m ping -i hosts'
+               
+            }
+	    }
+	
 	}
 }
